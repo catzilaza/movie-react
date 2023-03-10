@@ -3,10 +3,10 @@ import movieApi from "../../api/MovieApi";
 import { APIKey } from "../../api/MovieApiKey";
 import { useDispatch } from "react-redux";
 import { addMovie } from "../../store/Reducer";
-import './Home.scss';
-import MovieListing from "../MovieListing/MovieListing";
+import './HomeComponent.scss';
+import MovieListingComponent from "../MovieListingComponent/MovieListingComponent";
 
-function Home() {
+function HomeComponent() {
   const dispatch = useDispatch();
   const [search, setSearch] = useState("");
   //console.log(search);
@@ -23,13 +23,15 @@ function Home() {
     };
     fetchMovies();
   }, [search]);
+
+  
   return (
     <div>
       <h3 style={{ margin: "1rem 0" }}>Movies</h3>
       <input type="text" placeholder="Search..." value={search} onChange={(e) => setSearch(e.target.value)}/>
-      <MovieListing />
+      <MovieListingComponent />
     </div>
   );
 }
 
-export default Home;
+export default HomeComponent;

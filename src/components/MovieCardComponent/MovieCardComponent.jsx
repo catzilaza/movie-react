@@ -1,7 +1,7 @@
 import React from "react";
-import "./MovieCard.scss";
+import "./MovieCardComponent.scss";
 import { Link } from "react-router-dom";
-function MovieCard({ movie }) {
+function MovieCardComponent({ movie }) {
   return (
     <div className="card">
       <div className="card-image">
@@ -18,4 +18,4 @@ function MovieCard({ movie }) {
   );
 }
 
-export default MovieCard;
+export default MovieCardComponent;

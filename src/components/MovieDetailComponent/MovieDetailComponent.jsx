@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
-import "./MovieDetail.scss";
+import "./MovieDetailComponent.scss";
 import movieApi from "../../api/MovieApi";
 import { APIKey } from "../../api/MovieApiKey";
 import { useParams } from "react-router-dom";
 
-function MovieDetail() {
+function MovieDetailComponent() {
   const [movie, setMovie] = useState([]);
   const [loading, setLoading] = useState(false);
   const { id } = useParams();
-  console.log(id);
+  //console.log(id);
 
   useEffect(() => {
     const fetchDetail = async () => {
@@ -47,4 +47,4 @@ function MovieDetail() {
   );
 }
 
-export default MovieDetail;
+export default MovieDetailComponent;

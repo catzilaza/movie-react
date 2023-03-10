@@ -1,35 +1,35 @@
-import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import reactLogo from "./assets/react.svg";
+import { Provider } from "react-redux";
 import "./App.css";
 
-import { Provider } from "react-redux";
+//Store
 import store from "./store/Store";
 
 //Components
-import Header from "./components/Header/Header";
-import Home from "./components/Home/Home";
-import MovieDetail from "./components/MovieDetail/MovieDetail";
-import Footer from "./components/Footer/Footer";
-import PageNotFound from "./components/PageNotFound/PageNotFound";
+//import NavbarComponent from "./components/NavbarComponent/NavbarComponent";
+import NavbarBootStepComponent from "./components/NavbarBootStepComponent/NavbarBootStepComponent"
+import FooterComponent from "./components/FooterComponent/FooterComponent";
 
+//Pages
+import AboutPage from "./pages/AboutPage/AbouPaget";
+import HomePage from "./pages/HomePage/HomePage";
+import PageNotFoundPage from "./pages/PageNotFoundPage/PageNotFoundPage";
+import MovieDetailPage from "./pages/MovieDetailPage/MovieDetailPage";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <div>
       <Provider store={store}>
         <Router>
-          <Header />
-          <div className="container">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/movie/:id" element={<MovieDetail />} />
-              <Route path="*" element={<PageNotFound />} />
-            </Routes>
-          </div>
-          <Footer/>
+          {/* <NavbarComponent /> */}
+          <NavbarBootStepComponent/>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/movie/:id" element={<MovieDetailPage />} />
+            <Route path="*" element={<PageNotFoundPage />} />
+          </Routes>
+          <FooterComponent />
         </Router>
       </Provider>
     </div>

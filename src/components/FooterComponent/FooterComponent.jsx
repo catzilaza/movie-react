@@ -1,7 +1,7 @@
 import React from 'react'
-import './Footer.scss'
+import './FooterComponent.scss'
 
-function Footer() {
+function FooterComponent() {
   return (
     <footer>
         <p>Copyright 2023</p>
@@ -9,4 +9,4 @@ function Footer() {
   )
 }
 
-export default Footer
+export default FooterComponent

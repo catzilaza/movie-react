@@ -1,18 +1,18 @@
 import React from "react";
-import "./MovieListing.scss";
+import "./MovieListingComponent.scss";
 import { useSelector } from "react-redux";
-import MovieCard from "../MovieCard/MovieCard";
+import MovieCardComponent from "../MovieCardComponent/MovieCardComponent";
 
 
-function MovieListing() {
+function MovieListingComponent() {
   const { movies } = useSelector((state) => state.movies);
   return (
     <div className="movie-container">
       {movies && movies.map((movie) => (
-        <MovieCard key={movie.imdbID} movie={movie}/>
+        <MovieCardComponent key={movie.imdbID} movie={movie}/>
       ))}
     </div>
   );
 }
 
-export default MovieListing;
+export default MovieListingComponent;
