@@ -55,10 +55,7 @@ function TodoPage() {
           <Form onSubmit={handleAdd}>
             <Row>
               <Col xs="10">
-                <Form.Group
-                  className="mb-3 mx-3"
-                  controlId="exampleForm.ControlInput1"
-                >
+                <InputGroup className="mb-3">
                   <Form.Control
                     type="text"
                     placeholder="Todo"
@@ -69,10 +66,10 @@ function TodoPage() {
                       setTodo(e.target.value);
                     }}
                   />
-                </Form.Group>
+                </InputGroup>
               </Col>
               <Col xs="auto">
-                <Button type="submit">ADD</Button>
+                <Button type="submit" size="lg">ADD</Button>
               </Col>
             </Row>
           </Form>
@@ -81,10 +78,10 @@ function TodoPage() {
         {/* Display Todo List AND Delete Button*/}
 
         {todos.map((todo, key) => (
-          <Row key={key} className="mb-3 ">
+          <Row key={key} className="mb-3">
             <Col xs="10">
               <InputGroup.Text
-                // className="mb-3"
+                //className="mb-3"
                 id="basic-addon1"
                 onClick={() => toggleDone(todo.id)}
                 className={todo.isDone ? "done" : ""}

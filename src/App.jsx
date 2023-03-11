@@ -12,7 +12,7 @@ import FooterComponent from "./components/FooterComponent/FooterComponent";
 
 //Pages
 import AboutPage from "./pages/AboutPage/AbouPaget";
-//import HomePage from "./pages/HomePage/HomePage";
+import HomePage from "./pages/HomePage/HomePage";
 import PageNotFoundPage from "./pages/PageNotFoundPage/PageNotFoundPage";
 import MovieDetailPage from "./pages/MovieDetailPage/MovieDetailPage";
 import ContactPage from "./pages/ContactPage/ContactPage";
@@ -26,7 +26,7 @@ function App() {
           {/* <NavbarComponent /> */}
           <NavbarBootStepComponent/>
           <Routes>
-            {/* <Route path="/" element={<HomePage />} /> */}
+            <Route path="/" element={<HomePage />} />
             <Route path="/todo" element={<TodoPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
