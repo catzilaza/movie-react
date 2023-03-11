@@ -1,0 +1,17 @@
+.todopage {
+    width: 800px;
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+#basic-addon1 {
+    margin-bottom: 10px;
+}

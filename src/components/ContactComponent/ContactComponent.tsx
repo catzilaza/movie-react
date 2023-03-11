@@ -21,6 +21,7 @@ function ContactComponent() {
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
+
     if (name === "name") {
       setName(value);
     } else if (name === "email") {
@@ -29,6 +30,11 @@ function ContactComponent() {
       setMessage(value);
     }
   };
+
+  console.log("-----------", '\n');
+  console.log("name :", name);
+  console.log("email :", email);
+  console.log("message :", message);
 
   return (
     <>
@@ -46,22 +52,24 @@ function ContactComponent() {
                 value={name}
                 onChange={handleChange}
               ></Form.Control>
+
               <Form.Label className="mt-3">Email</Form.Label>
               <Form.Control
                 className="mb-3"
                 type="email"
-                name="name"
+                name="email"
                 placeholder="Enter Your Email"
-                value={name}
+                value={email}
                 onChange={handleChange}
               ></Form.Control>
+
               <Form.Label className="mt-3">Message</Form.Label>
               <Form.Control
                 className="mb-3"
                 type="text"
-                name="name"
+                name="message"
                 placeholder="Enter Your Message"
-                value={name}
+                value={message}
                 onChange={handleChange}
               ></Form.Control>
               <Button
