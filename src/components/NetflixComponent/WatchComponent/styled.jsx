@@ -7,8 +7,7 @@ export const WatchContainer = styled.section`
   padding-top: 5%;
   padding-left: 15%;
   background-color: #000;
-  color: #fff;
-  font-size: 30px;
+  color: #fff;  
   height: 500px;
   border: 4px solid #222;
 `;

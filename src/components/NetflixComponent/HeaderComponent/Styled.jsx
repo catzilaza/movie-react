@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import HeaderBG from "../../../assets/NetflixClonePics/headerbg.jpg";
 
-
-
 export const HeaderCon = styled.section`
   height: 900px;
   text-align: center;
@@ -12,7 +10,6 @@ export const HeaderCon = styled.section`
   border: 8px solid #222;
   background-position: center;
   background-size: cover;
-
 `;
 export const NavCon = styled.section`
   display: flex;
@@ -56,8 +53,6 @@ export const BoxContainer = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid red;
-  border-radius: 5px;
   padding: 10px;
   height: 700px;
 `;
