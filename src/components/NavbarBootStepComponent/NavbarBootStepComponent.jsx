@@ -20,6 +20,9 @@ function NavbarBootStepComponent() {
             <Nav.Link as={Link} to="/">
               Home
             </Nav.Link>
+            <Nav.Link as={Link} to="/netflixclone">
+              NetflixClone
+            </Nav.Link>
             <Nav.Link as={Link} to="/todo">
               Todo List
             </Nav.Link>

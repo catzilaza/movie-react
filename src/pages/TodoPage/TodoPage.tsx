@@ -1,18 +1,22 @@
 import React, { useEffect, useRef, useState, FormEvent } from "react";
 import { Form, Button, InputGroup, Container, Row, Col } from "react-bootstrap";
 import "./TodoPage.scss";
-import TodoComponent from "../../components/TodoComponent/TodoComponent";
+//import TodoComponent from "../../components/TodoComponent/TodoComponent";
+import moment from "moment";
 
 export type TodoType = {
   id: number;
+  task: number;
   todo: string;
   isDone: boolean;
+  date: number;
 };
 
 function TodoPage() {
   const [todos, setTodos] = useState<TodoType[]>([]);
   const [todo, setTodo] = useState<string>("");
   const inputRef = useRef<HTMLInputElement>(null);
+  const [countTask, setCountTask] = useState(0);
 
   useEffect(() => {
     inputRef.current?.focus();
@@ -32,9 +36,12 @@ function TodoPage() {
         id: Date.now(),
         todo: `${inputRef.current?.value}`,
         isDone: false,
+        date: Date.now(),
+        task: countTask
       },
     ]);
     setTodo("");
+    setCountTask(countTask+1);
   };
 
   const toggleDone = (id: number) => {
@@ -69,7 +76,9 @@ function TodoPage() {
                 </InputGroup>
               </Col>
               <Col xs="auto">
-                <Button type="submit" size="lg">ADD</Button>
+                <Button type="submit" size="lg">
+                  ADD
+                </Button>
               </Col>
             </Row>
           </Form>
@@ -79,10 +88,15 @@ function TodoPage() {
 
         {todos.map((todo, key) => (
           <Row key={key} className="mb-3">
+            <h1>---------------------------------------------------------------</h1>
             <Col xs="10">
+              <h6>
+                Create Date : {moment(todo.date).format("DD/MM/YY :h:mm:ss a")}{" "}
+                | Task : {todo.task}
+              </h6>
               <InputGroup.Text
                 //className="mb-3"
-                id="basic-addon1"
+                // id="basic-addon1"
                 onClick={() => toggleDone(todo.id)}
                 className={todo.isDone ? "done" : ""}
               >
@@ -90,7 +104,9 @@ function TodoPage() {
               </InputGroup.Text>
             </Col>
             <Col xs="auto">
+              <br />
               <Button
+                className="mt-1"
                 variant="danger"
                 onClick={() => {
                   handleDelete(todo.id);
@@ -99,8 +115,10 @@ function TodoPage() {
                 Delete
               </Button>
             </Col>
-          </Row>
+            <br/>
+          </Row>          
         ))}
+        <br/>
 
         {/* {todos.map((todo, key) => (
           <ul key={key}>

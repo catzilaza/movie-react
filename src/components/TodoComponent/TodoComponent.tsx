@@ -2,6 +2,7 @@ import React from "react";
 import "./TodoComponent.scss";
 import { TodoType } from "../../pages/TodoPage/TodoPage";
 
+
 type TodoProps = TodoType & {
   toggleDone: (id: number) => void,
   deleteTodo: (id: number) => void,

@@ -17,6 +17,7 @@ import PageNotFoundPage from "./pages/PageNotFoundPage/PageNotFoundPage";
 import MovieDetailPage from "./pages/MovieDetailPage/MovieDetailPage";
 import ContactPage from "./pages/ContactPage/ContactPage";
 import TodoPage from "./pages/TodoPage/TodoPage";
+import NetflixClonePage from "./pages/NetflixClonePage/NetflixClonePage";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <NavbarBootStepComponent/>
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/netflixclone" element={<NetflixClonePage />} />
             <Route path="/todo" element={<TodoPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
