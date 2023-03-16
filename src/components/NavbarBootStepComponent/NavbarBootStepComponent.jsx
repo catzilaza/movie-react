@@ -27,8 +27,8 @@ function NavbarBootStepComponent() {
             <Nav.Link as={Link} to="/todo">
               Todo List
             </Nav.Link>
-            <Nav.Link as={Link} to="/register">
-              Register
+            <Nav.Link as={Link} to="/dessert">
+              Dessert Online-Store
             </Nav.Link>
             <Nav.Link as={Link} to="/about">
               About

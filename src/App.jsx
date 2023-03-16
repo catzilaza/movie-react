@@ -19,6 +19,7 @@ import ContactPage from "./pages/ContactPage/ContactPage";
 import TodoPage from "./pages/TodoPage/TodoPage";
 import NetflixClonePage from "./pages/NetflixClonePage/NetflixClonePage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
+import StoreDessertPage from "./pages/StoreDessertPage/StoreDessertPage";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/netflixclone" element={<NetflixClonePage />} />
+            <Route path="/dessert" element={<StoreDessertPage />} />
             <Route path="/todo" element={<TodoPage />} />
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/about" element={<AboutPage />} />

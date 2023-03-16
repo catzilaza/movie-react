@@ -10,6 +10,7 @@ import datas from "../../components/NetflixComponent/AskComponent/data";
 import FooterComponent from "../../components/NetflixComponent/FooterComponent/FooterComponent";
 
 
+
 function NetflixClonePage() {
   const [asks, setAsks] = useState(datas);
 

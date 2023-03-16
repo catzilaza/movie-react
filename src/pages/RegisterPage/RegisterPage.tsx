@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./RegisterPage.scss";
-import { Card, Form, Button } from "react-bootstrap";
+import { Card, Form, Button, Row , Col} from "react-bootstrap";
 const userFormElements = {
   formElements: {
     username: {
@@ -68,12 +68,11 @@ function RegisterPage() {
       message = `มากกว่า ${rule.maxLength} ตัวอักษร`;
     }
 
-    if (rule.pattern === 'email' && 'valid') {
-        if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value) === false) {
-            valid = false;
-            message = 'กรอกอีเมลไม่ถูกต้อง';
-        }
-
+    if (rule.pattern === "email" && "valid") {
+      if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value) === false) {
+        valid = false;
+        message = "กรอกอีเมลไม่ถูกต้อง";
+      }
     }
     return { status: !valid, message: message };
   }
@@ -123,11 +122,13 @@ function RegisterPage() {
 
   return (
     <>
-     
-      <div className="row">
-        <div className="col-sm-3 mt-5"></div>
-        <div className="col-sm-6 mt-5 mb-5">
-        <div><h4> RegisterPage </h4></div>
+    
+      <Row className="m-5">
+        <Col></Col>
+        <Col>
+          <div>
+            <h4> RegisterPage </h4>
+          </div>
           <Card>
             <Card.Body>
               <Form onSubmit={handelFormSubmit}>
@@ -140,7 +141,7 @@ function RegisterPage() {
                     id="username"
                     name="username"
                     onChange={handelFormChange}
-                    style = {{width:"100%", padding:"10px 10px"}}
+                    style={{ width: "100%", padding: "10px 10px" }}
                   />
                   <div className="invalid-feedback">
                     {getErrorMessage("username")}
@@ -154,7 +155,7 @@ function RegisterPage() {
                     className={getInputClass("email")}
                     id="email"
                     name="email"
-                    onChange={handelFormChange}                    
+                    onChange={handelFormChange}
                   />
                   <div className="invalid-feedback">
                     {getErrorMessage("email")}
@@ -174,15 +175,20 @@ function RegisterPage() {
                     {getErrorMessage("password")}
                   </div>
                 </Form.Group>
-                <Button className="mt-5" variant="primary" type="submit" disabled={!data.formValid}>
+                <Button
+                  className="mt-5"
+                  variant="primary"
+                  type="submit"
+                  disabled={!data.formValid}
+                >
                   Submit
                 </Button>
               </Form>
             </Card.Body>
           </Card>
-        </div>
-        <div className="col-sm-3 mt-5"></div>
-      </div>
+        </Col>
+        <Col></Col>
+      </Row>
     </>
   );
 }
