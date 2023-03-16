@@ -1,1 +1,27 @@
+// .Navbar {
+//   .Container {
+//     .Link[to="/register"] {
+//       border: 1px solid #e22626;
+//       border-radius: 5px;
+//       padding: 0.5rem 1rem;
+//       text-decoration: none;
+//       color: #cf4444;
+//     }
+//   }
+// }
 
+// .Link[to="/register"] {
+//     border: 1px solid #e22626;
+//     border-radius: 5px;
+//     padding: 0.5rem 1rem;
+//     text-decoration: none;
+//     color: #cf4444;
+//   }
+
+#linkToRegister {
+    border: 1px solid #e22626;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: #cf4444;
+}

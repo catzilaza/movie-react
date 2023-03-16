@@ -1,5 +1,6 @@
 import React from "react";
-import { Navbar, Container, Nav, Image } from "react-bootstrap";
+import './NavbarBootStepComponent.scss';
+import { Navbar, Container, Nav, Image, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 function NavbarBootStepComponent() {
@@ -26,6 +27,9 @@ function NavbarBootStepComponent() {
             <Nav.Link as={Link} to="/todo">
               Todo List
             </Nav.Link>
+            <Nav.Link as={Link} to="/register">
+              Register
+            </Nav.Link>
             <Nav.Link as={Link} to="/about">
               About
             </Nav.Link>
@@ -34,6 +38,20 @@ function NavbarBootStepComponent() {
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
+        <Link
+          id="linkToRegister"
+          to="/register"
+          // style={{
+          //   border: "1px solid #737373",
+          //   borderRadius: "5px",
+          //   padding: "0.5rem 1rem",
+          //   textDecoration: "none",
+          //   color: "#fff",
+          // }}
+
+        >
+          Register
+        </Link>
       </Container>
     </Navbar>
   );

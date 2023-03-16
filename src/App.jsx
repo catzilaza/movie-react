@@ -18,7 +18,7 @@ import MovieDetailPage from "./pages/MovieDetailPage/MovieDetailPage";
 import ContactPage from "./pages/ContactPage/ContactPage";
 import TodoPage from "./pages/TodoPage/TodoPage";
 import NetflixClonePage from "./pages/NetflixClonePage/NetflixClonePage";
-
+import RegisterPage from "./pages/RegisterPage/RegisterPage";
 
 function App() {
   return (
@@ -31,6 +31,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/netflixclone" element={<NetflixClonePage />} />
             <Route path="/todo" element={<TodoPage />} />
+            <Route path="/register" element={<RegisterPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/movie/:id" element={<MovieDetailPage />} />
